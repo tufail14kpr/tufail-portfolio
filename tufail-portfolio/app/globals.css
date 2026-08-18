@@ -953,6 +953,7 @@ a {
   opacity: 0.3;
 }
 
+/* Desktop: 3-column alternating layout */
 .timeline-item {
   position: relative;
   display: grid;
@@ -962,17 +963,34 @@ a {
   margin-bottom: 48px;
 }
 
-.timeline-item:nth-child(even) .timeline-content {
-  grid-column: 3;
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
+/* Left items: content | dot | spacer */
+.timeline-item--left .timeline-content {
   grid-column: 1;
   text-align: right;
 }
 
-.timeline-dot {
+.timeline-item--left .timeline-dot {
   grid-column: 2;
+}
+
+.timeline-item--left .timeline-spacer {
+  grid-column: 3;
+}
+
+/* Right items: spacer | dot | content */
+.timeline-item--right .timeline-spacer {
+  grid-column: 1;
+}
+
+.timeline-item--right .timeline-dot {
+  grid-column: 2;
+}
+
+.timeline-item--right .timeline-content {
+  grid-column: 3;
+}
+
+.timeline-dot {
   width: 40px;
   height: 40px;
   background: var(--gradient-primary);
@@ -984,6 +1002,7 @@ a {
   position: relative;
   box-shadow: 0 0 20px rgba(108, 99, 255, 0.4);
   z-index: 1;
+  flex-shrink: 0;
 }
 
 .timeline-content {
@@ -1280,22 +1299,37 @@ a {
     grid-template-columns: 1fr;
   }
 
+  /* Timeline: switch to single-column left-aligned on tablet/mobile */
   .timeline::before {
     left: 20px;
+    transform: none;
   }
 
-  .timeline-item {
+  .timeline-item,
+  .timeline-item--left,
+  .timeline-item--right {
     grid-template-columns: 40px 1fr;
+    gap: 16px;
   }
 
-  .timeline-item:nth-child(odd) .timeline-content,
-  .timeline-item:nth-child(even) .timeline-content {
-    grid-column: 2;
-    text-align: left;
+  /* All spacers hidden on mobile */
+  .timeline-spacer {
+    display: none;
   }
 
-  .timeline-dot {
+  /* Dot always in column 1 */
+  .timeline-item--left .timeline-dot,
+  .timeline-item--right .timeline-dot {
     grid-column: 1;
+    grid-row: 1;
+  }
+
+  /* Content always in column 2, left-aligned */
+  .timeline-item--left .timeline-content,
+  .timeline-item--right .timeline-content {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
   }
 }
 
@@ -1557,7 +1591,9 @@ a {
   }
 
   /* Timeline */
-  .timeline-item {
+  .timeline-item,
+  .timeline-item--left,
+  .timeline-item--right {
     grid-template-columns: 36px 1fr;
     gap: 10px;
   }

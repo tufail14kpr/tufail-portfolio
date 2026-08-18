@@ -26,7 +26,7 @@ const experiences = [
     title: 'Frontend Developer',
     company: 'TechUnique IIT — techuniqueiit.com',
     description:
-      'Started career at TechUnique IIT as a React.js developer. Built the company\'s official website (techuniqueiit.com) and progressed into Node.js & backend development.',
+      "Started career at TechUnique IIT as a React.js developer. Built the company's official website (techuniqueiit.com) and progressed into Node.js & backend development.",
   },
   {
     emoji: '🎓',
@@ -52,7 +52,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
         >
           <span className="section-tag">My Journey</span>
-          <h2 className="section-title">Experience & Learning</h2>
+          <h2 className="section-title">Experience &amp; Learning</h2>
           <p className="section-description">
             My professional journey and the milestones that shaped me as a developer.
           </p>
@@ -62,36 +62,27 @@ export default function Experience() {
           {experiences.map((exp, i) => (
             <motion.div
               key={exp.title}
-              className="timeline-item"
+              className={`timeline-item ${i % 2 === 0 ? 'timeline-item--left' : 'timeline-item--right'}`}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15, ease: 'easeOut' }}
             >
-              {/* Odd items: content left, dot center */}
               {i % 2 === 0 ? (
                 <>
-                  <motion.div
-                    className="timeline-content"
-                    style={{ gridColumn: 1 }}
-                    whileHover={{ scale: 1.02 }}
-                  >
+                  <motion.div className="timeline-content" whileHover={{ scale: 1.02 }}>
                     <div className="timeline-period">{exp.period}</div>
                     <h3 className="timeline-title">{exp.title}</h3>
                     <div className="timeline-company">{exp.company}</div>
                     <p className="timeline-desc">{exp.description}</p>
                   </motion.div>
-                  <div className="timeline-dot" style={{ gridColumn: 2 }}>{exp.emoji}</div>
-                  <div style={{ gridColumn: 3 }} />
+                  <div className="timeline-dot">{exp.emoji}</div>
+                  <div className="timeline-spacer" />
                 </>
               ) : (
                 <>
-                  <div style={{ gridColumn: 1 }} />
-                  <div className="timeline-dot" style={{ gridColumn: 2 }}>{exp.emoji}</div>
-                  <motion.div
-                    className="timeline-content"
-                    style={{ gridColumn: 3 }}
-                    whileHover={{ scale: 1.02 }}
-                  >
+                  <div className="timeline-spacer" />
+                  <div className="timeline-dot">{exp.emoji}</div>
+                  <motion.div className="timeline-content" whileHover={{ scale: 1.02 }}>
                     <div className="timeline-period">{exp.period}</div>
                     <h3 className="timeline-title">{exp.title}</h3>
                     <div className="timeline-company">{exp.company}</div>
