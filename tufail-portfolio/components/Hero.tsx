@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import dynamic from 'next/dynamic';
 
 const Scene = dynamic(() => import('./Scene'), { ssr: false });
@@ -43,12 +43,12 @@ export default function Hero() {
     return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
   }, [displayedText, isDeleting, roleIndex]);
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
