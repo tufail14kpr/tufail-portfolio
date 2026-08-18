@@ -5,28 +5,28 @@ import { useRef } from 'react';
 
 const experiences = [
   {
-    emoji: '💻',
-    period: '2024 – Present',
+    emoji: '🚀',
+    period: '2025 – Present',
     title: 'Full-Stack Developer',
-    company: 'Freelance / Self-Employed',
+    company: 'TechUnique IIT — uniquebooksplus.com',
     description:
-      'Building complete web applications using React, Next.js, Node.js, and MongoDB. Developed AI-powered tools, employee management systems, and microservices architectures for various clients.',
+      'Currently building UniqueBooks Plus — a full-scale web application using Next.js, React.js, REST APIs, MongoDB, MS SQL, and deployed on Vercel. Responsible for complete frontend & backend architecture.',
+  },
+  {
+    emoji: '🍽️',
+    period: '2024 – 2025',
+    title: 'Backend & Full-Stack Developer',
+    company: 'TechUnique IIT — HRMS & Restaurant Website',
+    description:
+      'Developed an HRMS (Human Resource Management System) and a restaurant website using Node.js, MongoDB, and React.js. Handled REST API design, database integration, and deployment.',
   },
   {
     emoji: '⚛️',
-    period: '2025 – 2026',
-    title: 'React & Next.js Specialist',
-    company: 'Personal Projects & Learning',
+    period: '2024',
+    title: 'Frontend Developer',
+    company: 'TechUnique IIT — techuniqueiit.com',
     description:
-      'Deep-dived into modern React patterns, Next.js App Router, server-side rendering, and TypeScript. Built production-grade CRUD apps with authentication and complex state management.',
-  },
-  {
-    emoji: '🟩',
-    period: '2024 – 2025',
-    title: 'Backend Developer',
-    company: 'Node.js + MongoDB Projects',
-    description:
-      'Developed robust REST APIs with Node.js and Express. Implemented JWT authentication, built microservices architectures, and worked with MongoDB for data persistence.',
+      'Started career at TechUnique IIT as a React.js developer. Built the company\'s official website (techuniqueiit.com) and progressed into Node.js & backend development.',
   },
   {
     emoji: '🎓',
@@ -34,7 +34,7 @@ const experiences = [
     title: 'Web Development Learner',
     company: 'Self-Taught Journey',
     description:
-      'Started the web development journey learning HTML5, CSS3, and JavaScript fundamentals. Built foundational projects and developed a strong understanding of core web technologies.',
+      'Began the web development journey with HTML5, CSS3, and JavaScript fundamentals. Built foundational projects and developed a solid understanding of core web technologies before landing the first job.',
   },
 ];
 
