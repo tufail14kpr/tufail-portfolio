@@ -59,13 +59,14 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <div className="container navbar-inner">
-          <motion.span
-            className="navbar-logo"
-            whileHover={{ scale: 1.05 }}
-            onClick={() => handleNav('#home')}
-          >
-            &lt;Tufail /&gt;
-          </motion.span>
+          <Link href="/" style={{ textDecoration: 'none' }}>
+            <motion.span
+              className="navbar-logo"
+              whileHover={{ scale: 1.05 }}
+            >
+              &lt;Tufail /&gt;
+            </motion.span>
+          </Link>
 
           <ul className="navbar-links">
             {navLinks.map((link, i) => (
