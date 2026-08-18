@@ -1261,6 +1261,11 @@ a {
     margin: 0 auto 36px;
   }
 
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1295,11 +1300,22 @@ a {
 }
 
 @media (max-width: 768px) {
+  /* Section padding */
   .section {
-    padding: 70px 0;
+    padding: 60px 0;
   }
 
-  .navbar-links {
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  /* Navbar */
+  .navbar-links,
+  .navbar-cta {
     display: none;
   }
 
@@ -1307,36 +1323,285 @@ a {
     display: flex;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 14px;
+  /* Hero */
+  .hero {
+    padding-top: 70px;
   }
 
+  .hero-content {
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-stat-number {
+    font-size: 1.6rem;
+  }
+
+  /* About */
+  .about-grid {
+    gap: 32px;
+  }
+
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .about-experience-badge {
+    bottom: -16px;
+    right: -10px;
+    padding: 14px 18px;
+  }
+
+  .about-experience-badge .number {
+    font-size: 1.8rem;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 20px 12px;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .skill-name {
+    font-size: 12px;
+  }
+
+  /* Projects */
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  /* Timeline / Experience */
+  .timeline {
+    padding: 0 0 0 10px;
+  }
+
+  .timeline::before {
+    left: 19px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 40px 1fr;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .timeline-content {
+    padding: 18px;
+  }
+
+  .timeline-title {
+    font-size: 15px;
+  }
+
+  .timeline-company {
+    font-size: 13px;
+  }
+
+  .timeline-desc {
+    font-size: 13px;
+  }
+
+  /* Contact */
+  .contact-grid {
+    gap: 32px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .contact-form {
+    padding: 24px 18px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
   }
 
+  /* Blog grid */
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-search-bar {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  /* Footer */
   .footer-inner {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Hero */
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero-name {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .hero-stats {
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .hero-stat-number {
+    font-size: 1.4rem;
+  }
+
+  .hero-stat-label {
+    font-size: 10px;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 14px 8px;
+  }
+
+  .skill-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .skill-name {
+    font-size: 11px;
+  }
+
+  .skill-level {
+    display: none;
+  }
+
+  .skill-bar {
+    display: none;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    grid-template-columns: 36px 1fr;
+    gap: 10px;
+  }
+
+  .timeline-dot {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .timeline-content {
+    padding: 14px;
+  }
+
+  /* Contact form */
+  .contact-form {
+    padding: 18px 14px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  /* About info grid */
+  .about-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-outline {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+
+  /* Blog */
+  .article-container {
+    padding: 100px 16px 60px;
+  }
+
+  .article-title {
+    font-size: 1.6rem;
   }
 }
 
