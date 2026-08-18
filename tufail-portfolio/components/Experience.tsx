@@ -6,7 +6,7 @@ import { useRef } from 'react';
 const experiences = [
   {
     emoji: '🚀',
-    period: '2025 – Present',
+    period: '2026 – Present',
     title: 'Full-Stack Developer',
     company: 'TechUnique IIT — uniquebooksplus.com',
     description:
