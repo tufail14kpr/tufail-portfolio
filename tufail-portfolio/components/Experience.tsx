@@ -30,11 +30,11 @@ const experiences = [
   },
   {
     emoji: '🎓',
-    period: '2023 – 2024',
-    title: 'Web Development Learner',
-    company: 'Self-Taught Journey',
+    period: '2020 – 2024',
+    title: 'B.Tech in Computer Science & Engineering',
+    company: 'Amritsar Group of Colleges — agcamritsar.in',
     description:
-      'Began the web development journey with HTML5, CSS3, and JavaScript fundamentals. Built foundational projects and developed a solid understanding of core web technologies before landing the first job.',
+      'Completed B.Tech CSE with core subjects including Java, C++, Computer Networks, Data Structures, and OS. Alongside academics, self-taught HTML, CSS, and JavaScript — which sparked the passion for web development.',
   },
 ];
 
